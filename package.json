@@ -9,9 +9,9 @@
   "scripts": {
     "prepare": "npm run build",
     "watch": "tsc --watch",
-    "build": "tsc",
+    "build": "tsc && npm run docs",
     "test": "jest --verbose",
-    "docs": "jsdoc -c jsdoc.json"
+    "docs": "jsdoc -c jsdoc.json src/**/*.ts"
   },
   "files": [
     "lib"
