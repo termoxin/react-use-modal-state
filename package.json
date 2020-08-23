@@ -1,7 +1,7 @@
 {
   "name": "react-use-modal-state",
   "version": "1.0.0",
-  "repository": "git@github.com:termoxin/redux-use-modal-state.git",
+  "repository": "git@github.com:termoxin/react-use-modal-state.git",
   "author": "Rostislav Futornoy <rostislav.futornoy@gmail.com>",
   "license": "MIT",
   "main": "lib/index.js",
