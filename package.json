@@ -16,6 +16,13 @@
   "files": [
     "lib"
   ],
+  "keywords": [
+    "react",
+    "redux",
+    "state-management",
+    "state",
+    "react-hooks"
+  ],
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.3",
     "@testing-library/react": "^10.4.8",
