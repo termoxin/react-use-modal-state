@@ -173,14 +173,11 @@
 
 
 <div class="description">
-    A hook to access the redux modals' state. This hook takes an action name
+    A hook to access the modals' state. This hook takes n modal name
 as a first argument
 
 This hook takes an initial state as the second optional argument
-that allows you to set initial data for the specific modal's state based on the actionName argument
-
-If you want to type the hook you can use your typings (e.g. `TypedUseModalStateHook`)
-to create a properly typed hook for your specific modal state
+that allows you to set initial data for the specific modal's state based on the modal name argument
 </div>
 
 
@@ -222,7 +219,7 @@ to create a properly typed hook for your specific modal state
         <p class="tag-source">
             <a href="index.ts.html" class="button">View Source</a>
             <span>
-                <a href="index.ts.html">index.ts</a>, <a href="index.ts.html#line39">line 39</a>
+                <a href="index.ts.html">index.ts</a>, <a href="index.ts.html#line38">line 38</a>
             </span>
         </p>
     
@@ -236,6 +233,7 @@ to create a properly typed hook for your specific modal state
     
     
         <pre class="prettyprint"><code>import React from 'react'
+
 import { useModalState } from 'hooks/useModalState'
 
 export const ExampleModal = () => {

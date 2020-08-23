@@ -30,14 +30,12 @@ interface UseModalStateReturn<T> {
 }
 
 /**
- * A hook to access the redux modals' state. This hook takes an action name
+ * A hook to access the modals' state. This hook takes n modal name
  * as a first argument
  *
  * This hook takes an initial state as the second optional argument
- * that allows you to set initial data for the specific modal's state based on the actionName argument
+ * that allows you to set initial data for the specific modal's state based on the modal name argument
  *
- * If you want to type the hook you can use your typings (e.g. `TypedUseModalStateHook`)
- * to create a properly typed hook for your specific modal state
  *
  * @param name modal name
  * @param initialState initialState for the specific modal
@@ -47,6 +45,7 @@ interface UseModalStateReturn<T> {
  * @example
  *
  * import React from 'react'
+ *
  * import { useModalState } from 'hooks/useModalState'
  *
  * export const ExampleModal = () => {
