@@ -46,7 +46,7 @@ interface UseModalStateReturn<T> {
  *
  * import React from 'react'
  *
- * import { useModalState } from 'hooks/useModalState'
+ * import { useModalState } from 'react-use-modal-state'
  *
  * export const ExampleModal = () => {
  *  const {isOpened, state: {counter}, set} = useModalState(EXAMPLE_MODAL, {
