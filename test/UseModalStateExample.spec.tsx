@@ -2,13 +2,13 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 
 import { UseModalStateExample } from '../src/useModalState/UseModalStateExample';
-import { StoreProvider } from '../src/state/StoreProvider';
+import { ModalStoreProvider } from '../src/state/ModalStoreProvider';
 
 test('modal state should change correctly', () => {
   render(
-    <StoreProvider>
+    <ModalStoreProvider>
       <UseModalStateExample />
-    </StoreProvider>
+    </ModalStoreProvider>
   );
 
   const isOpened = screen.getByText(/opened/i);

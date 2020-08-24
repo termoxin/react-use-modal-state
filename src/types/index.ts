@@ -4,7 +4,7 @@ export interface Action {
   [key: string]: any;
 }
 
-export interface StoreProviderValue<S> {
+export interface ModalStoreProviderValue<S> {
   dispatch: Dispatch<Action>;
   state: S;
 }

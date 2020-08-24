@@ -1,17 +1,17 @@
 import React, { createContext, useReducer } from 'react';
 
 import { modalsReducer } from './modalReducer';
-import { StoreProviderValue } from '../types';
+import { ModalStoreProviderValue } from '../types';
 
 const initialState = {};
 
 export const globalContext = createContext(initialState);
 const { Provider } = globalContext;
 
-export const StoreProvider: React.FC = ({ children }) => {
+export const ModalStoreProvider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(modalsReducer, initialState);
 
-  const value: StoreProviderValue<typeof state> = {
+  const value: ModalStoreProviderValue<typeof state> = {
     state,
     dispatch,
   };

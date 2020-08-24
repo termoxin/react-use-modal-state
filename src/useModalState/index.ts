@@ -1,7 +1,7 @@
 import isEqual from 'lodash/isEqual';
 import { useEffect, useCallback, useContext } from 'react';
 
-import { globalContext } from '../state/StoreProvider';
+import { globalContext } from '../state/ModalStoreProvider';
 import { SET_MODAL_STATE } from '../state/modalReducer';
 
 export type BasicState<S> = S & {
