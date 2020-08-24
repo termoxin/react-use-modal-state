@@ -7,3 +7,7 @@
 ## Documentation 📑
 
 https://termoxin.github.io/react-use-modal-state/global.html#useModalState
+
+## Demo 📺
+
+https://codesandbox.io/s/react-use-modal-state-demo-vyqez
