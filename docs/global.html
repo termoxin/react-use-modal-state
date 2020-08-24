@@ -219,7 +219,7 @@ that allows you to set initial data for the specific modal's state based on the 
         <p class="tag-source">
             <a href="index.ts.html" class="button">View Source</a>
             <span>
-                <a href="index.ts.html">index.ts</a>, <a href="index.ts.html#line38">line 38</a>
+                <a href="index.ts.html">index.ts</a>, <a href="index.ts.html#line54">line 54</a>
             </span>
         </p>
     
@@ -232,22 +232,38 @@ that allows you to set initial data for the specific modal's state based on the 
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>import React from 'react'
+        <pre class="prettyprint"><code>import React from "react";
+import { useModalState, ModalStoreProvider } from "react-use-modal-state";
 
-import { useModalState } from 'react-use-modal-state'
+const Counter = () => {
+  const {
+    isOpened,
+    state: { counter },
+    set,
+    open,
+    close
+  } = useModalState("EXAMPLE_MODAL", { counter: 1, isOpened: true });
 
-export const ExampleModal = () => {
- const {isOpened, state: {counter}, set} = useModalState(EXAMPLE_MODAL, {
-   counter: 0
- })
+  return (
+    &lt;div>
+      {isOpened &amp;&amp; &lt;div>{counter}&lt;/div>}
+      &lt;button onClick={() => set({ counter: counter + 1 })}>increment&lt;/button>
+      &lt;button onClick={() => (isOpened ? close() : open())}>
+        {isOpened ? "Hide counter" : "Show counter"}
+      &lt;/button>
+    &lt;/div>
+  );
+};
 
- return (
-   &lt;div>
-     {isOpened &amp;&amp; &lt;div>{counter}&lt;/div>}
-     &lt;button onClick={() => set('counter', counter + 1)}>increment&lt;/button>
-   &lt;/div>
-  )
- }</code></pre>
+const App = () => (
+  &lt;>
+    &lt;ModalStoreProvider>
+      &lt;Counter />
+    &lt;/ModalStoreProvider>
+  &lt;/>
+);
+
+export default App;</code></pre>
     
 
 
