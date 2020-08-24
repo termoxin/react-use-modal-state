@@ -44,22 +44,38 @@ interface UseModalStateReturn<T> {
  *
  * @example
  *
- * import React from 'react'
+ * import React from "react";
+ * import { useModalState, ModalStoreProvider } from "react-use-modal-state";
  *
- * import { useModalState } from 'react-use-modal-state'
+ * const Counter = () => {
+ *   const {
+ *     isOpened,
+ *     state: { counter },
+ *     set,
+ *     open,
+ *     close
+ *   } = useModalState("EXAMPLE_MODAL", { counter: 1, isOpened: true });
  *
- * export const ExampleModal = () => {
- *  const {isOpened, state: {counter}, set} = useModalState(EXAMPLE_MODAL, {
- *    counter: 0
- *  })
+ *   return (
+ *     <div>
+ *       {isOpened && <div>{counter}</div>}
+ *       <button onClick={() => set({ counter: counter + 1 })}>increment</button>
+ *       <button onClick={() => (isOpened ? close() : open())}>
+ *         {isOpened ? "Hide counter" : "Show counter"}
+ *       </button>
+ *     </div>
+ *   );
+ * };
  *
- *  return (
- *    <div>
- *      {isOpened && <div>{counter}</div>}
- *      <button onClick={() => set('counter', counter + 1)}>increment</button>
- *    </div>
- *   )
- *  }
+ * const App = () => (
+ *   <>
+ *     <ModalStoreProvider>
+ *       <Counter />
+ *     </ModalStoreProvider>
+ *   </>
+ * );
+ *
+ * export default App;
  */
 
 export const useModalState = <T>(
