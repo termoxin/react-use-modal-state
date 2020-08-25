@@ -1,5 +1,7 @@
 # react-use-modal-state
 
+The way to make modal state management in React painless 😄
+
 ## Installation 🔧
 
 `npm install react-use-modal-state` or `yarn add react-use-modal-state`
