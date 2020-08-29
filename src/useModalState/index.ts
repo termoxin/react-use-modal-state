@@ -124,7 +124,7 @@ export const useModalState = <T>(
   };
 
   const reset = (): void => {
-    dispatch(createSetterAction({ ...state, ...initialState, isOpened: false }));
+    dispatch(createSetterAction({ ...state, isOpened: false, ...initialState }));
   };
 
   const setAndOpen = (value: T): void => {
