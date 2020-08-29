@@ -2,15 +2,29 @@
 
 The way to make modal state management in React painless 😄
 
-## Installation 🔧
+## 💡 What problem does it solve?
+
+The project helps to manage the state of modal elements easily. Most importantly, without pain
+
+## 📼 What are the use cases for the package?
+
+The usage of the project starts with hackneyed modal window, lightboxes and ends with hiding buttons in different React component
+
+## ❓ Why should it be used?
+
+1. It will help to get rid of fatigue when working with a vast number of modal element
+2. It is easy to manage modal window merely having their name saved in constant
+3. It is simple, tiny, and it does not have dependencies
+
+## 🔧 Installation
 
 `npm install react-use-modal-state` or `yarn add react-use-modal-state`
 
-## Documentation 📑
+## 📑 Documentation
 
 https://termoxin.github.io/react-use-modal-state/global.html#useModalState
 
-## API
+## 🖐 API
 
 ```tsx
 { isOpened, open, close, state, set, setAndOpen, reset, resetAndClose, } = useModalState(modalName, initialState)
@@ -22,13 +36,13 @@ https://termoxin.github.io/react-use-modal-state/global.html#useModalState
 
 `close` A function to close modal element
 
-`state` A custom state of modal element (it consists of predefined `isOpened` property, but you can redeclare it whenever you want to)
+`state` A custom state of the modal element (it consists of predefined `isOpened` property, but you can redeclare it whenever you want to)
 
-`set` A function to set custom state for the modal element
+`set` A function to set the custom state for the modal element
 
 `setAndOpen` A function to set custom state and open a modal element (by changing its `isOpened` property)
 
-`reset` A function to reset custom state (it resets state to object with `isOpened=false` when initialState is not defined)
+`reset` A function to reset custom state (it resets the state to object with `isOpened=false` when initialState is not defined)
 
 `resetAndClose` The function does the same like `reset` does, but also resets modal element state and close it
 
