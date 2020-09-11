@@ -8,11 +8,11 @@ The project helps to manage the state of modal elements easily. Most importantly
 
 ## 📼 What are the use cases for the package?
 
-The usage of the project starts with hackneyed modal window, lightboxes and ends with hiding buttons in different React component
+There is a wide variety of use cases. For instance, hackneyed modal window, lightboxes. Simply, if you want to create elements which can be toggled between visible and hidden state, it is the package's use case
 
 ## ❓ Why should it be used?
 
-1. It will help to get rid of fatigue when working with a vast number of modal element
+1. It will help to get rid of fatigue when working with a vast number of modal elements
 2. It is easy to manage modal window merely having their name saved in constant
 3. It is simple, tiny, and it does not have dependencies
 
@@ -20,9 +20,9 @@ The usage of the project starts with hackneyed modal window, lightboxes and ends
 
 `npm install react-use-modal-state` or `yarn add react-use-modal-state`
 
-## 📑 Documentation
+## Demo 📺
 
-https://termoxin.github.io/react-use-modal-state/global.html#useModalState
+https://codesandbox.io/s/react-use-modal-state-demo-vyqez
 
 ## 🖐 API
 
@@ -50,6 +50,6 @@ https://termoxin.github.io/react-use-modal-state/global.html#useModalState
 
 `initialState` An optional argument to set initialState (is object with `isOpened=false` by default)
 
-## Demo 📺
+## 📑 Documentation
 
-https://codesandbox.io/s/react-use-modal-state-demo-vyqez
+https://termoxin.github.io/react-use-modal-state/global.html#useModalState
