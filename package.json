@@ -23,9 +23,6 @@
     "state",
     "react-hooks"
   ],
-  "dependencies": {
-    "lodash": "^4.17.20"
-  },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.3",
     "@testing-library/react": "^10.4.8",
