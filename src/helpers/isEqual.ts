@@ -1,36 +1,27 @@
-export const isEqual = (a: any, b: any) => {
-  let p;
-  let t;
+type isEqualObject = Record<string | number | symbol, unknown>;
 
-  for (p in a) {
-    if (typeof b[p] === 'undefined') {
-      return false;
-    }
+export const isEqual = (firstObj: isEqualObject, secondObj: isEqualObject): boolean => {
+  const firstObjKeys = Object.keys(firstObj);
+  const secondObjKeys = Object.keys(secondObj);
 
-    if (b[p] && !a[p]) {
-      return false;
-    }
-
-    t = typeof a[p];
-
-    if (t === 'object' && !isEqual(a[p], b[p])) {
-      return false;
-    }
-
-    if (t === 'function' && (typeof b[p] === 'undefined' || a[p].toString() !== b[p].toString())) {
-      return false;
-    }
-
-    if (a[p] !== b[p]) {
-      return false;
-    }
+  if (firstObjKeys.length !== secondObjKeys.length) {
+    return false;
   }
 
-  for (p in b) {
-    if (typeof a[p] === 'undefined') {
+  for (const key of keys1) {
+    const val1 = firstObj[key];
+    const val2 = secondObj[key];
+
+    const areObjects = isObject(val1) && isObject(val2);
+
+    if ((areObjects && !isEqual(val1, val2)) || (!areObjects && val1 !== val2)) {
       return false;
     }
   }
 
   return true;
 };
+
+function isObject(object: isEqualObject) {
+  return object != null && typeof object === 'object';
+}
