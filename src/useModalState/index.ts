@@ -1,8 +1,8 @@
-import isEqual from 'lodash/isEqual';
 import { useEffect, useCallback, useContext } from 'react';
 
 import { globalContext } from '../state/ModalStoreProvider';
 import { SET_MODAL_STATE } from '../state/modalReducer';
+import { isEqual } from '../helpers/isEqual';
 
 export type BasicState<S> = S & {
   isOpened?: boolean;
@@ -124,7 +124,7 @@ export const useModalState = <T>(
   };
 
   const reset = (): void => {
-    dispatch(createSetterAction({ ...state, ...initialState, isOpened: false }));
+    dispatch(createSetterAction({ ...state, isOpened: false, ...initialState }));
   };
 
   const setAndOpen = (value: T): void => {
