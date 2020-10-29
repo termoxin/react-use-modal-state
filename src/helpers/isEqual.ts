@@ -8,9 +8,9 @@ export const isEqual = (firstObj: isEqualObject, secondObj: isEqualObject): bool
     return false;
   }
 
-  for (const key of keys1) {
-    const val1 = firstObj[key];
-    const val2 = secondObj[key];
+  for (const key of firstObjKeys) {
+    const val1 = firstObj[key] as isEqualObject;
+    const val2 = secondObj[key] as isEqualObject;
 
     const areObjects = isObject(val1) && isObject(val2);
 
